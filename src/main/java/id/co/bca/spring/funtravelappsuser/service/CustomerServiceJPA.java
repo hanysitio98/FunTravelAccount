@@ -16,17 +16,17 @@ public class CustomerServiceJPA implements ICustomerService {
 
     @Override
     public void insert(CustomerModel customer) {
-        // sdjRepository.save(customer);
+        sdjRepository.save(customer);
     }
 
     @Override
     public void update(CustomerModel customer) {
-        // sdjRepository.save(customer);
+        sdjRepository.save(customer);
     }
 
     @Override
     public void delete(CustomerModel customer) {
-        // sdjRepository.deleteById(customer.getId());
+        sdjRepository.deleteById(customer.getId());
     }
 
     @Override
@@ -35,12 +35,12 @@ public class CustomerServiceJPA implements ICustomerService {
     }
 
     @Override
-    public List<CustomerModel> allCustomer() {
+    public List<CustomerModel> allCustomers() {
         return sdjRepository.findAllByOrderByLastName();
     }
 
     @Override
-    public List<CustomerModel> allCustomerPage(int page, int size) {
+    public List<CustomerModel> allCustomersPage(int page, int size) {
         Pageable pageable = PageRequest.of(page, size);
         return sdjRepository.findAll(pageable).getContent();
     }

@@ -8,6 +8,6 @@ public interface ICustomerService {
     void update(CustomerModel customer);
     void delete(CustomerModel customer);
     CustomerModel findTheCustomer(CustomerModel customer);
-    List<CustomerModel> allCustomer();
-    List<CustomerModel> allCustomerPage(int page, int size);
+    List<CustomerModel> allCustomers();
+    List<CustomerModel> allCustomersPage(int page, int size);
 }
